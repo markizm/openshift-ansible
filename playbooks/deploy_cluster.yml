@@ -1,4 +1,9 @@
 ---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - debug: msg="Starting deploy_cluster"
 - import_playbook: init/main.yml
   vars:
     l_prereq_check_hosts: "oo_nodes_to_config"
